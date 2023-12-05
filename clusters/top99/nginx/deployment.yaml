@@ -7,16 +7,16 @@ spec:
   selector:
     matchLabels:
       app: "nginx-label"
-  replicas: 3
+  replicas: 5
   template:
     metadata:
       labels:
-        app: "nginx-label"
+        app: "nginx-app-label"
     spec:
       containers:
       - image: nginx:1.24.0
         imagePullPolicy: Always
-        name: "nginx"
+        name: "nginx-container"
         ports:
         - containerPort: 80
 
